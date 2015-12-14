@@ -31,5 +31,6 @@ CREATE TABLE IF NOT EXISTS `#__polls_votes` (
   `created_on` datetime DEFAULT NULL,
   `created_by` int(11) DEFAULT NULL,
   PRIMARY KEY (`polls_vote_id`),
-  KEY `poll_id` (`polls_item_id`)
+  UNIQUE KEY `polls_vote_id_UNIQUE` (`polls_vote_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
