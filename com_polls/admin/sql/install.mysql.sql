@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `#__polls_items` (
 DROP TABLE IF EXISTS `#__polls_votes`;
 CREATE TABLE IF NOT EXISTS `#__polls_votes` (
   `polls_vote_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `polls_item_id` int(11) NOT NULL,
+  `polls_answer_id` int(11) NOT NULL,
   `ip` int(10) unsigned NOT NULL,
   `created_on` datetime DEFAULT NULL,
   `created_by` int(11) DEFAULT NULL,
