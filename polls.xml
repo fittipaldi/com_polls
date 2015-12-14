@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.1" method="upgrade">
+    <name>com_polls</name>
+    <author>Atratis</author>
+    <creationDate>Dezembro 2015</creationDate>
+    <copyright>(C) 2005 - 2015 Open Source Matters. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>carlosfittipaldi@atratis.com.br</authorEmail>
+    <authorUrl>www.atratis.org</authorUrl>
+    <version>1.0</version>
+
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.sql</file>
+        </sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>contact.php</filename>
+        <filename>controller.php</filename>
+        <filename>metadata.xml</filename>
+        <filename>router.php</filename>
+        <folder>helpers</folder>
+        <folder>models</folder>
+        <folder>views</folder>
+    </files>
+
+    <administration>
+        <menu img="class:component">COM_POLLS</menu>
+        <submenu>
+            <menu link="option=com_polls" img="class:component">COM_POLLS</menu>
+        </submenu>
+        <files folder="admin">
+            <filename>controller.php</filename>
+            <filename>fof.xml</filename>
+            <filename>polls.php</filename>
+            <filename>polls.xml</filename>
+            <folder>controllers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="admin">
+            <language tag="pt-BR">language/pt-BR.com_polls.ini</language>
+        </languages>
+    </administration>
+
+</extension>
+

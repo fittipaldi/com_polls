@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form validate="true" serverside_validate="true" enctype="multipart/form-data">
+    <fieldset name="basic_information" class="span7" addfieldpath="/administrator/components/com_polls/models/fields">
+        <field name="title" id="title" type="text" required="true" label="COM_POLLS_TITLE" class="inputbox input-xxlarge input-large-text span12"/>
+        <field name="alias" id="alias" type="text" required="true" label="COM_POLLS_ALIAS" class="inputbox input-xxlarge input-large-text span12"/>
+        <field name="description" id="description" type="textarea" label="COM_POLLS_DESCRIPTION" filter="safehtml" class="span12" rows="5"/>
+        <field name="answers" id="answers" type="answers" label="COM_POLLS_ANSWERS" filter="safehtml" class="span12" rows="5"/>
+    </fieldset>
+    <fieldset name="sidebar" class="span5">
+        <field name="polls_item_id" id="polls_item_id" type="text" readonly="true" label="ID"/>
+        <field name="state" type="list" label="COM_POLLS_STATE_SHOW" default="1" class="chzn-color-state">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="created_on" type="calendar" label="COM_POLLS_CREATED_ON" class="inputbox" size="22" format="%d-%m-%Y %H:%M:%S" default="NOW" filter="user_utc"/>
+        <field name="created_by" type="user" label="COM_POLLS_CREATED_BY" default="CURRENT"/>
+    </fieldset>
+</form>
