@@ -6,8 +6,7 @@ CREATE TABLE IF NOT EXISTS `#__polls_answers` (
   `order` int(11) NOT NULL,
   `created_by` int(11) DEFAULT NULL,
   `created_on` datetime DEFAULT NULL,
-  PRIMARY KEY (`polls_answer_id`),
-  UNIQUE KEY `polls_answer_id_UNIQUE` (`polls_answer_id`)
+  PRIMARY KEY (`polls_answer_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 DROP TABLE IF EXISTS `#__polls_items`;
@@ -19,8 +18,7 @@ CREATE TABLE IF NOT EXISTS `#__polls_items` (
   `state` char(1) DEFAULT '1',
   `created_by` int(11) DEFAULT NULL,
   `created_on` datetime DEFAULT NULL,
-  PRIMARY KEY (`polls_item_id`),
-  UNIQUE KEY `polls_item_id_UNIQUE` (`polls_item_id`)
+  PRIMARY KEY (`polls_item_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 DROP TABLE IF EXISTS `#__polls_votes`;
@@ -30,7 +28,5 @@ CREATE TABLE IF NOT EXISTS `#__polls_votes` (
   `ip` int(10) unsigned NOT NULL,
   `created_on` datetime DEFAULT NULL,
   `created_by` int(11) DEFAULT NULL,
-  PRIMARY KEY (`polls_vote_id`),
-  UNIQUE KEY `polls_vote_id_UNIQUE` (`polls_vote_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`polls_vote_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
